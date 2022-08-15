@@ -6,5 +6,5 @@ type = "gallery"
 +++
 
 I got a new keyboard. It's a [Vortex Gear KBt RE:
-68](https://vortexgear.store/products/kbt-re-66). I like the retro aesthetic and
+68](https://vortexgear.store/products/kbt-re-68). I like the retro aesthetic and
 it feels solid to type on. 
