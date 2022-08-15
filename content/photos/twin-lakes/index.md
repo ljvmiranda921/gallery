@@ -5,4 +5,5 @@ title = "twin lakes"
 type = "gallery"
 +++
 
-lorem ipsum sit dolor amet
+It's a nice place. Learned that it was also developed by Megaworld, that's why
+it feels like McKinley Hill.
