@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+Taken from the original Gameboy Camera.
+
+
+<h1>Photos</h1>
+
+<div class="image-grid">
+    {{ with .Site.GetPage "/photos" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc")}}
+    <a href="{{ .Permalink }}" title="{{ .Title }}">
+        {{ $image := .Page.Resources.GetMatch .Params.image }}
+        {{ with $image }}
+        {{ $thumb := .Resize "400x" }}
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
+        {{end}}
+    </a>
+    {{ end }}
+    {{ end }}
+</div>
+
+{{ end }}
