@@ -3,13 +3,14 @@
 
 <div class="divider">
     <div class="left">
-    {{ if and (isset .Params "image") .Params.image }}
+        {{ if and (isset .Params "image") .Params.image }}
         {{ $image := .Page.Resources.GetMatch .Params.image }}
         {{ with $image }}
-            {{ $thumb := .Resize "1000x" }}
-            {{ printf `<img src="%s" alt="%s" class="img-responsive gallery-image" style="width:400px">` $thumb.RelPermalink .Title | safeHTML }}
+        {{ $thumb := .Resize "1000x" }}
+        {{ printf `<img src="%s" alt="%s" class="img-responsive gallery-image" style="width:400px">` $thumb.RelPermalink
+        .Title | safeHTML }}
         {{end}}
-    {{ end }}
+        {{ end }}
     </div>
     <div class="right">
         <h1>{{ .Page.Title }}</h1>
@@ -19,31 +20,30 @@
 </div>
 
 <style>
-@media (min-width: 768px) {
-  .divider {
-    display: flex;
-  }
-}
+    @media (min-width: 768px) {
+        .divider {
+            display: flex;
+        }
+    }
 
-.left {
-  flex: 0 0 40%;
-  text-align: center;
-  padding: 10px;
-}
+    .left {
+        flex: 0 0 40%;
+        text-align: center;
+        padding: 10px;
+    }
 
-.right {
-  flex: 1;
-  padding: 10px;
-}
+    .right {
+        flex: 1;
+        padding: 10px;
+    }
 
-#profilepic {
-    border-radius: 50%;
-    width: 200;
-    height: 200;
-    text-align: center;
-}
+    #profilepic {
+        border-radius: 50%;
+        width: 200;
+        height: 200;
+        text-align: center;
+    }
 </style>
 
 {{ template "_internal/disqus.html" . }}
 {{ end }}
-

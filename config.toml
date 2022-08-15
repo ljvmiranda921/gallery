@@ -5,7 +5,7 @@ theme = 'hugo-theme-console'
 
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
-  titleCutting = true
+  titleCutting = false
 
   # Set the animation style -- https://animate.style/
   # To disable animations, please remove or comment animationStyle parameter

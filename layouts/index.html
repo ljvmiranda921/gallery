@@ -11,12 +11,25 @@ Taken from the original Gameboy Camera.
     <a href="{{ .Permalink }}" title="{{ .Title }}">
         {{ $image := .Page.Resources.GetMatch .Params.image }}
         {{ with $image }}
-        {{ $thumb := .Resize "400x" }}
+        {{ $thumb := .Resize "1000x" }}
         <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
         {{end}}
     </a>
     {{ end }}
     {{ end }}
 </div>
+
+<style>
+    .image-grid {
+        display: grid;
+        grid-template-rows: auto;
+        display: grid;
+        grid-gap: 1.25em;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit,
+                minmax(calc(var(--page-width) / 6), 1fr));
+    }
+</style>
+
 
 {{ end }}
