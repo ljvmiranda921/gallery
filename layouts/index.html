@@ -6,7 +6,7 @@ Taken from the original Gameboy Camera.
 <h1>Photos</h1>
 
 <div class="image-grid">
-    {{ with .Site.GetPage "/photos" }}
+    {{ with .Site.GetPage "/" }}
     {{ range (sort .Data.Pages "Date" "desc")}}
     <a href="{{ .Permalink }}" title="{{ .Title }}">
         {{ $image := .Page.Resources.GetMatch .Params.image }}

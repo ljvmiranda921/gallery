@@ -1,6 +1,6 @@
 baseURL = 'https://ljvmiranda921.github.io/gallery'
 languageCode = 'en-us'
-title = 'gb-gallery'
+title = 'ljvmiranda921'
 theme = 'hugo-theme-console'
 
 [params]
@@ -14,3 +14,5 @@ theme = 'hugo-theme-console'
   [[params.navlinks]]
   name = "about/"
   url = "about/"
+
+  twitter = "ljvmiranda921"
