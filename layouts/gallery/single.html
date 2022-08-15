@@ -15,9 +15,13 @@
     <div class="right">
         <h1>{{ .Page.Title }}</h1>
         <i>{{ .Page.Date | time.Format ":date_full" }}</i>
-        &nbsp;
-        {{ .Content }}
 
+        <p>
+            {{ .Content }}
+        </p>
+
+
+        <p>(c) ljvmiranda</p>
         // <a href="https://twitter.com/ljvmiranda921">Twitter</a>
         // <a href="https://github.com/ljvmiranda921">Github</a>
     </div>
@@ -32,7 +36,7 @@
 
     .left {
         flex: 0 0 40%;
-        text-align: center;
+        text-align: left;
         padding: 10px;
     }
 
