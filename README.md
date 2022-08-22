@@ -1,4 +1,4 @@
-# Game Boy Camera Gallery
+# ljvmiranda921.github.io/gallery 
 
 A showcase of my photos using the [Game Boy Camera](https://en.wikipedia.org/wiki/Game_Boy_Camera).
 
