@@ -4,15 +4,18 @@ title = 'ljvmiranda921'
 theme = 'hugo-theme-console'
 
 [params]
-  # Cutting off the page title to two chars for mobile (console-demo -> co)
-  titleCutting = false
+# Cutting off the page title to two chars for mobile (console-demo -> co)
+titleCutting = false
 
-  # Set the animation style -- https://animate.style/
-  # To disable animations, please remove or comment animationStyle parameter
-  animateStyle = "animated zoomIn fast" 
+# Set the animation style -- https://animate.style/
+# To disable animations, please remove or comment animationStyle parameter
+animateStyle = "animated zoomIn fast"
 
-  [[params.navlinks]]
-  name = "about/"
-  url = "about/"
+[[params.navlinks]]
+name = "about/"
+url = "about/"
 
-  twitter = "ljvmiranda921"
+twitter = "ljvmiranda921"
+
+[markup.goldmark.renderer]
+unsafe = true
