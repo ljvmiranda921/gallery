@@ -6,4 +6,6 @@ type = "gallery"
 +++
 
 I usually pass by the Aurora bridge on my way to work. 
-It's fun walking near the bridge because of the scenic view.
+It's fun walking near the bridge because of the lake's scenic view.
+
+<img src="aurora_0.png" style="width:200px"/>
