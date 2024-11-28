@@ -1,6 +1,6 @@
 +++
 title = "About"
-image = ""
+image = "profile.jpg"
 +++
 
 Hi I'm [Lj Miranda](https://ljvmiranda921.github.io) and welcome to my little
