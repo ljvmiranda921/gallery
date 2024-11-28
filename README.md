@@ -7,7 +7,19 @@ A showcase of my photos using the [Game Boy Camera](https://en.wikipedia.org/wik
 
 First, you need to have [Hugo installed in your
 system](https://github.com/gohugoio/hugo#install-hugo-as-your-site-generator-binary-install).
-Clone the repository, and then run:
+Clone the repository:
+
+```sh
+git clone git@github.com:ljvmiranda921/gallery.git
+```
+
+If it's your first time cloning this repository, make sure to pull the theme first
+
+```sh
+git submodule update --init --recursive
+```
+
+Then, start the server:
 
 ```sh
 hugo server -D
