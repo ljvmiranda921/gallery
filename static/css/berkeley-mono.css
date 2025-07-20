@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('../font/BerkeleyMono-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('../font/BerkeleyMono-Oblique.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('../font/BerkeleyMono-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('../font/BerkeleyMono-Bold-Oblique.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+:root {
+    --mono-font-stack: Berkeley Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    --font-stack: Berkeley Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
