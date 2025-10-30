@@ -6,3 +6,6 @@ type = "gallery"
 +++
 
 The Cambridge University Library.
+
+
+<img src="uk_phonebooth.png" style="width:200px"/>
