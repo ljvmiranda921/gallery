@@ -1,7 +1,7 @@
 +++
 image = "churchill.png"
 date = "2025-10-11"
-title = "cornell"
+title = "churchill"
 type = "gallery"
 +++
 
