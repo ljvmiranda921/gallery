@@ -14,3 +14,4 @@ hugo.linux
 
 # Some files
 *dropbox.attrs
+.DS_Store
