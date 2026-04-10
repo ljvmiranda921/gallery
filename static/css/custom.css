@@ -1,0 +1,65 @@
+:root {
+    --background-color: #fffff8;
+    --font-color: #111;
+    --global-font-color: #111;
+    --primary-color: #a00000;
+    --invert-font-color: #fffff8;
+    --global-line-height: 1.6em;
+    --display-h1-decoration: none;
+    --page-width: 70em;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+.content-column-content p,
+.content-column-content li,
+p,
+li {
+    color: var(--font-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6,
+.terminal h1, .terminal h2, .terminal h3,
+.terminal h4, .terminal h5, .terminal h6 {
+    color: var(--primary-color);
+}
+
+h1, .terminal h1 {
+    margin-bottom: 60px;
+}
+
+h1::after {
+    display: none;
+}
+
+.logo, .terminal .logo {
+    color: var(--font-color);
+}
+
+.terminal-menu li a:not(.btn) {
+    color: var(--primary-color);
+}
+
+.terminal-prompt::after {
+    background: var(--primary-color);
+}
+
+.image-grid img,
+img.gallery-image,
+.divider .right img {
+    filter: grayscale(95%);
+}
