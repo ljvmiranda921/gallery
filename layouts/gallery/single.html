@@ -1,5 +1,18 @@
 {{ define "main" }}
 
+{{/* Build the same ordering as the home grid (newest first) so prev/next match. */}}
+{{ $pages := sort (where (.Site.GetPage "/").Data.Pages "Type" "gallery") "Date" "desc" }}
+{{ $idx := -1 }}
+{{ range $i, $p := $pages }}
+    {{ if eq $p.Permalink $.Permalink }}{{ $idx = $i }}{{ end }}
+{{ end }}
+{{ $prev := "" }}
+{{ $next := "" }}
+{{/* $pages is newest-first, so older = higher index, newer = lower index. */}}
+{{ if ge $idx 0 }}
+    {{ if lt (add $idx 1) (len $pages) }}{{ $prev = index $pages (add $idx 1) }}{{ end }}
+    {{ if gt $idx 0 }}{{ $next = index $pages (sub $idx 1) }}{{ end }}
+{{ end }}
 
 <div class="divider">
     <div class="left">
@@ -22,13 +35,32 @@
 
 
         <p>(c) ljvmiranda</p>
-        // <a href="https://ljvmiranda.micro.blog">Micro</a>
         // <a href="https://ljvmiranda921.github.io">Website</a>
-        // <a href="https://github.com/ljvmiranda921">Github</a>
+        // <a href="https://ljvmiranda921.itch.io">Games</a>
+        // <a href="https://github.com/ljvmiranda921">Code</a>
     </div>
 </div>
 
+<div class="post-nav">
+    <span class="post-nav-prev">
+        {{ with $prev }}<a href="{{ .RelPermalink }}">&lt;&lt; Previous</a>{{ end }}
+    </span>
+    <span class="post-nav-next">
+        {{ with $next }}<a href="{{ .RelPermalink }}">Next &gt;&gt;</a>{{ end }}
+    </span>
+</div>
+
 <style>
+    .post-nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 1.5em 10px;
+    }
+
+    .post-nav-next {
+        margin-left: auto;
+    }
+
     @media (min-width: 768px) {
         .divider {
             display: flex;
